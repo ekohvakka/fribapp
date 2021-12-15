@@ -46,7 +46,7 @@
     .card.populated {
         margin-top: 0.25rem;
         background-color: #5EAAE7;
-        padding: 5em;
+        padding: 0.25em;
         display: grid;
         grid-template-columns: 0.25fr 1fr 1fr 1fr;
         align-items: center;
