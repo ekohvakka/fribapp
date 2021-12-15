@@ -39,29 +39,27 @@
         flex-direction: column;
         justify-content: center;
         min-width: 80vw;
-        max-width: 80vh;
         border-radius: 3px;
+        max-height: 15vh;
     }
     
     .card.populated {
-        margin-top: 0.5vh;
+        margin-top: 0.25rem;
         background-color: #5EAAE7;
-        padding: 0.25em;
+        padding: 5em;
         display: grid;
         grid-template-columns: 0.25fr 1fr 1fr 1fr;
         align-items: center;
-        min-height: 3vh;
         border-radius: 3px;
     }
     
     .card.empty {
-        margin-top: 0.5vh;
+        margin-top: 0.5rem;
         background-color: #5EAAE7;
         padding: 0.25em;
         display: grid;
         grid-template-columns: 0.25fr 1fr;
         align-items: center;
-        min-height: 3vh;
         border-radius: 3px;
     }
 
