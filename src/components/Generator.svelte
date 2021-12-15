@@ -9,7 +9,7 @@
         <div>
             Number of players:
         </div>
-        <div>
+        <div class="actions">
             <button on:click={() => players--}>-</button>
             <input id="number" type="number" class="number" value={players}>
             <button on:click={() => players++}>+</button>
@@ -44,7 +44,7 @@
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        max-width: 50%;
+        min-width: 50%;
     }
 
     @media (max-width: 400px) {
@@ -57,6 +57,13 @@
         max-width: 30vw;
         margin: 0;
         text-align: center;
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        white-space: nowrap;
     }
 
     
