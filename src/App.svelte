@@ -9,13 +9,13 @@
 
 <Modal show={$modal}>
     <div class="main">
-        <div class="header">
+        <header>
             <ul class="menu">
-                <li><a href="/" on:click|preventDefault={() => (menu = 2)}>All challenges</a></li>
+                <li><a href="/" on:click|preventDefault={() => (menu = 1)}>All challenges</a></li>
                 <li><a href="/" on:click|preventDefault={() => (menu = 2)}>Generator</a></li>
                 <li><a href="/" on:click|preventDefault={() => (menu = 2)}>Settings</a></li>
             </ul>
-        </div>
+        </header>
         {#if menu == 1}
         <Games />
         {:else if menu == 2}
@@ -27,6 +27,10 @@
 </Modal>
 
 <style>
+
+    :global(body) {
+        padding: 0;
+    }
 	.main {
 		text-align: center;
 		margin: 0;
@@ -55,15 +59,17 @@
         width: 100%;
         padding: 0;
     }
-    
-    .header {
-        background-color: #49C0EB;
-        border-radius: 4px;
-        width: 96vw;
-        height: 6vh;
-        text-align: center;
+
+    header {
         display: flex;
-        flex-direction: row;
+        justify-content: space-between;
+        background-color:#edf2f7;
         align-items: center;
+        color:#718096;
+        padding: 0.5rem;
+        border-bottom-width: 2px;
+        margin-bottom: 0.25rem;
+        height: 36px;
+
     }
 </style>

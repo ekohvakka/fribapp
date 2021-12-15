@@ -65,18 +65,21 @@
     {/each}
 </ol>
 
-<button on:click={randomizeGame}>
-    Randomize
-</button>
-<button on:click={selectAll}>
-    Select all
-</button>
+<div class="actions">
+
+    <button on:click={randomizeGame}>
+        Randomize
+    </button>
+    <button on:click={selectAll}>
+        Select All
+    </button>
+</div>
 
 <style>
     .games-list {
         display: flex;
         flex-direction: column;
-        width: 89vw;
+        align-items: center;
         padding: 0 3vw 0 3vw;
         margin: 0;
     }
@@ -89,11 +92,27 @@
         border-radius: 3px;
         font-size: 16px;
         padding: 0.5em 0 0.5em 0;
+        min-width: 80vw;
     }
 
     input {
         flex: none;
         margin: 0 0.5em 0 1em;
+    }
+
+    .actions {
+        display: flex;
+        justify-content: center;
+    }
+
+    button { 
+        padding: 0.5rem;
+        margin: 0.5rem;
+        border-radius: 3px;
+    }
+
+    button:hover {
+        background-color: #5EAAE7;
     }
 
 </style>
