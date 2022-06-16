@@ -1,22 +1,19 @@
 <script>
     import Throw from "./Throw.svelte";
     let players = 2;
-
 </script>
 
 <div class="root">
     <div class="players">
-        <div>
-            Number of players:
-        </div>
+        <div>Number of players:</div>
         <div class="actions">
             <button on:click={() => players--}>-</button>
-            <input id="number" type="number" class="number" value={players}>
+            <input id="number" type="number" class="number" value={players} />
             <button on:click={() => players++}>+</button>
         </div>
     </div>
-    {#each {length: players} as _, i}
-        <Throw number={i + 1}/>
+    {#each { length: players } as _, i}
+        <Throw number={i + 1} />
     {/each}
 </div>
 
@@ -35,8 +32,8 @@
         min-width: 10vw;
         max-width: 15vw;
         margin: 0;
-        background-color:#edf2f7;
-        color:#718096;
+        background-color: #edf2f7;
+        color: #718096;
         border-radius: 3px;
         text-align: center;
     }
@@ -65,7 +62,4 @@
         justify-content: center;
         white-space: nowrap;
     }
-
-    
-
 </style>
